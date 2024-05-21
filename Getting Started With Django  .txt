@@ -1,4 +1,6 @@
-Getting Started With Django  
+Getting Started With Django 
+Link to follow  - https://www.tabnine.com/blog/how-to-create-django-projects-in-pycharm-community-edition/
+ 
 To install Django, create and navigate to your project folder. Boot up your command line (cmd in Windows) and run the following command to create your virtual environment.
 
 python -m venv env 
@@ -57,4 +59,39 @@ Django==5.0.6
 sqlparse==0.5.0
 tzdata==2024.1
 (env) PS C:\Users\Public\Documents\django_projects\python-rest-api>
+"""
+
+
+-----------------------------------------------------------------------------------------------
+
+
+Creating app in Django
+To start your Django app, go back to your command line and run the following:
+
+python manage.py startapp watchlist_app
+
+To see your Django app working, go back to your command line and run the following:
+
+python manage.py runserver
+
+"""
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm> python manage.py startapp watchlist_app
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 21, 2024 - 23:10:04
+Django version 5.0.6, using settings 'movieratingpycharm.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+[21/May/2024 23:10:22] "GET / HTTP/1.1" 200 10629
+Not Found: /favicon.ico
+[21/May/2024 23:10:22] "GET /favicon.ico HTTP/1.1" 404 2122
+
+
 """
