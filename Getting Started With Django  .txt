@@ -1,0 +1,60 @@
+Getting Started With Django  
+To install Django, create and navigate to your project folder. Boot up your command line (cmd in Windows) and run the following command to create your virtual environment.
+
+python -m venv env 
+
+venv is the command to create your virtual environment in Python. env is your environment name. In theory, env can be called anything you want but for this guide, we’re going to keep to the convention.
+This will create an env folder for you with all the scripts and libraries required to run a Python-compatible virtual environment. To activate your virtual environment, run the following command:
+
+.\env\Scripts\activate
+
+
+You will see (env) in your command line in front of your directory. For example:
+
+(env) C:Documentspython
+
+
+Once that is running, you can run the following command to install Django onto your local machine.
+
+pip install django
+
+
+You might get a warning to upgrade pip but this is not a requirement to continue. once that is completed, you can now create your first Django project. To do this, use the django-admin command:
+
+django-admin startproject movieratingpycharm
+
+You can replace pycharmtut with whatever you want. The above command will create a new Django project with the minimum required files and setup. Before we can run your new Django app? We need to set it up.
+
+"""
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Public\Documents\django_projects\python-rest-api> python -m venv env
+PS C:\Users\Public\Documents\django_projects\python-rest-api> .\env\Scripts\activate
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api> pip install django
+Collecting django
+  Downloading Django-5.0.6-py3-none-any.whl.metadata (4.1 kB)
+Collecting asgiref<4,>=3.7.0 (from django)
+  Downloading asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django)
+  Downloading sqlparse-0.5.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django)
+  Downloading tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Downloading Django-5.0.6-py3-none-any.whl (8.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 8.9 MB/s eta 0:00:00
+Downloading asgiref-3.8.1-py3-none-any.whl (23 kB)
+Downloading sqlparse-0.5.0-py3-none-any.whl (43 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 2.2 MB/s eta 0:00:00
+Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 345.4/345.4 kB 7.1 MB/s eta 0:00:00
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.8.1 django-5.0.6 sqlparse-0.5.0 tzdata-2024.1
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api> pip freeze
+asgiref==3.8.1
+Django==5.0.6
+sqlparse==0.5.0
+tzdata==2024.1
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api>
+"""
