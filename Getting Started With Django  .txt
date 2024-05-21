@@ -135,3 +135,27 @@ Bypass password validation and create user anyway? [y/N]: y
 Superuser created successfully.
 (env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm>
 """
+
+Create a movie model in models.py
+
+"""
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm> python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+  Your models in app(s): 'watchlist_app' have changes that are not yet reflected in a migration, and so won't be applied.
+  Run 'manage.py makemigrations' to make new migrations, and then re-run 'manage.py migrate' to apply them.
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm> python manage.py makemigrations
+Migrations for 'watchlist_app':
+  watchlist_app\migrations\0001_initial.py
+    - Create model Movie
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm>
+
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm> python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, watchlist_app
+Running migrations:
+  Applying watchlist_app.0001_initial... OK
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm>
+"""
