@@ -1,9 +1,17 @@
 from watchlist_app.models import Movie
+from watchlist_app.api.serializers import MovieSerializers
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 
-
+@api_view()
 def movie_list(request):
-    ...  # TO be implemented
+    movies = Movie.objects.all()
+    serializer = MovieSerializers(movies)
+    return Response(serializer.data)
 
 
-def movie_details(request, pk):
-    ...  # TO be implemented
+@api_view()
+def movie_detail(request, pk):
+    movies = Movie.objects.get(pk=pk)
+    serializer = MovieSerializers(movies)
+    return Response(serializer.data)
