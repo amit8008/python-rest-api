@@ -152,10 +152,47 @@ Migrations for 'watchlist_app':
     - Create model Movie
 (env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm>
 
-(env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm> python manage.py migrate
-Operations to perform:
-  Apply all migrations: admin, auth, contenttypes, sessions, watchlist_app
-Running migrations:
-  Applying watchlist_app.0001_initial... OK
-(env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm>
+
+"""
+
+
+Restart the same Django app again by follow below, need to activate python venv again to start Django app
+
+"""
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Public\Documents\django_projects\python-rest-api> .\env\Scripts\activate
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api> python manage.py runserver
+C:\Users\amit8\AppData\Local\Programs\Python\Python312\python.exe: can't open file 'C:\\Users\\Public\\Documents\\django_projects\\python-rest-api\\manage.py': [Errno 2] No such file or directory
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api> cd .\movieratingpycharm\
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 22, 2024 - 01:20:50
+Django version 5.0.6, using settings 'movieratingpycharm.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+Not Found: /
+[22/May/2024 01:21:05] "GET / HTTP/1.1" 404 2177
+[22/May/2024 01:21:23] "GET /admin/ HTTP/1.1" 200 6980
+[22/May/2024 01:21:23] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[22/May/2024 01:21:23] "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[22/May/2024 01:21:23] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[22/May/2024 01:21:23] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[22/May/2024 01:21:23] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[22/May/2024 01:21:23] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[22/May/2024 01:21:23] "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[22/May/2024 01:21:23] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[22/May/2024 01:21:23] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[22/May/2024 01:21:41] "GET /movie/list/ HTTP/1.1" 200 182
+Not Found: /movie/list/2
+[22/May/2024 01:21:53] "GET /movie/list/2 HTTP/1.1" 404 2490
+[22/May/2024 01:21:59] "GET /movie/2 HTTP/1.1" 200 76
+(env) PS C:\Users\Public\Documents\django_projects\python-rest-api\movieratingpycharm> exit
 """
