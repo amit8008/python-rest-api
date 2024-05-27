@@ -7,7 +7,8 @@ class MovieSerializers(serializers.ModelSerializer):
     class Meta:
         model = Movie
         # fields = '__all__'
-        fields = ['id', 'name', 'description']
+        # fields = ['id', 'name', 'description']
+        exclude = ['active']
 
 
         def validate_name(self, value):
