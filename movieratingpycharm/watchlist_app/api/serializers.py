@@ -4,22 +4,26 @@ from watchlist_app.models import Movie
 
 class MovieSerializers(serializers.ModelSerializer):
 
+    name_len = serializers.SerializerMethodField()
+
     class Meta:
         model = Movie
-        # fields = '__all__'
+        fields = '__all__'
         # fields = ['id', 'name', 'description']
-        exclude = ['active']
+        # exclude = ['active']
 
+    def get_name_len(self, object):
+        return len(object.name)
 
-        def validate_name(self, value):
-            if len(value) < 3:
-                raise serializers.ValidationError("Name is too short")
-            return value
+    def validate_name(self, value):
+        if len(value) < 3:
+            raise serializers.ValidationError("Name is too short")
+        return value
 
-        def validate(self, data):
-            if data['name'] == data['description']:
-                raise serializers.ValidationError("Movie name should not same as description")
-            return data
+    def validate(self, data):
+        if data['name'] == data['description']:
+            raise serializers.ValidationError("Movie name should not same as description")
+        return data
 
 # def length_gt_4(value):
 #     if len(value) < 4:
