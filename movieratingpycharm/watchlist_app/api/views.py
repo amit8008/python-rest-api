@@ -49,7 +49,7 @@ class ShowDetailAV(APIView) :
 class StreamPlatformListAV(APIView):
     def get(self, request):
         platform = StreamPlatform.objects.all()
-        serializer = StreamPlatformSerializers(platform, many = True, context={'request': request})
+        serializer = StreamPlatformSerializers(platform, many = True)
         return Response(serializer.data)
 
     def post(self, request):

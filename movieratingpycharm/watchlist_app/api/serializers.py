@@ -9,13 +9,13 @@ class ShowsSerializers(serializers.ModelSerializer) :
 
 
 class StreamPlatformSerializers(serializers.ModelSerializer) :
-    # All_Shows = ShowsSerializers(many = True, read_only = True)
+    All_Shows = ShowsSerializers(many = True, read_only = True)
     # All_Shows = serializers.StringRelatedField(many=True)
-    All_Shows = serializers.HyperlinkedRelatedField(
-        many=True,
-        read_only=True,
-        view_name='show-detail'
-    )
+    # All_Shows = serializers.HyperlinkedRelatedField(
+    #     many=True,
+    #     read_only=True,
+    #     view_name='show-detail'
+    # )
 
     class Meta :
         model = StreamPlatform
